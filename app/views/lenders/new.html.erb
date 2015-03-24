@@ -1,0 +1,25 @@
+<h1>Lenders#new</h1>
+<p>Find me in app/views/lenders/new.html.erb</p>
+
+<h1>Creating a new lender</h1>
+<p>Let's build a form built with form_for</p>
+
+ <%= form_for(@lender) do |f| %>
+	<%= f.label :first_name, "First Name" %>
+	<%= f.text_field :first_name %>
+	<%= f.label :first_name, "Last Name" %>
+	<%= f.text_field :first_name %>
+	<%= f.label :email, "email" %>
+	<%= f.text_field :email %>
+	<%= f.label :password, "password" %>
+	<%= f.text_field :password %>
+	<%= f.label :money, "money" %>
+	<%= f.text_field :money %>
+	<br>
+	<%= f.submit %>
+
+	<%end%>
+
+
+<h2>This is the form built using the form_for helper</h2>
+<!-- it will render the partial view in _form.html.erb -->

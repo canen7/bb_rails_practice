@@ -1,0 +1,20 @@
+<h1>Borrowers#index</h1>
+<p>Find me in app/views/borrowers/index.html.erb</p>
+
+<h2>List of borrowers</h2>
+
+<% @borrowers.each do |borrower| %>
+	<h3>Name: <%= borrower.first_name%> <%= borrower.last_name%></h3>
+	<%= link_to 'show', borrower_path(borrower) %>
+	<br>
+	<%= link_to 'edit', edit_borrower_path(borrower) %>
+	<form action='/borrowers/<%= borrower.id %>' method='delete'>
+		<a href=""><input type='submit' value='delete'></a>
+	</form>
+	</h3>
+
+<%end%>
+<p>
+<%= link_to 'add_new_borrower', new_borrower_path %>
+
+</p>

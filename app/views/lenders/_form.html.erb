@@ -1,0 +1,21 @@
+<% if @lender.errors%>
+	<% @lender.errors.full_messages.each do |err| %>
+		<p class='errors'><%= err %></p>
+	<%end%>
+<%end%>
+
+
+<%= form_for(@lender) do |f| %>
+	<%= f.label :first_name, "First Name" %>
+	<%= f.text_field :first_name %>
+	<%= f.label :first_name, "Last Name" %>
+	<%= f.text_field :first_name %>
+	<%= f.label :email, "email" %>
+	<%= f.text_field :email %>
+	<%= f.label :password, "password" %>
+	<%= f.text_field :password %>
+	<%= f.label :money, "money" %>
+	<%= f.text_field :money %>
+	<br>
+	<%= f.submit %>
+<% end %>

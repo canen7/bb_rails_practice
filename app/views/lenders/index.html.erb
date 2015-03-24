@@ -1,0 +1,20 @@
+<h1>Lenders#index</h1>
+<p>Find me in app/views/lenders/index.html.erb</p>
+
+<h2>List of lenders</h2>
+
+<% @lenders.each do |lender|%>
+	<h3>Name: <%=lender.first_name %> <%=lender.last_name %><br> 
+		<%= link_to 'show', lender_path(lender)%> <br>
+		<%= link_to 'edit', edit_lender_path(lender)%> 
+		<form action='/lenders/<%= lender.id %>' method='delete'><a href=""><input type='submit' value='delete'></a></form>
+	</h3>
+		
+<%end%>
+
+<p>
+<%= link_to 'add_new_lender', new_lender_path %>
+
+</p>	
+
+

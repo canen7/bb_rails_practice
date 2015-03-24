@@ -1,0 +1,14 @@
+<h1>Lenders#show</h1>
+<p>Find me in app/views/lenders/show.html.erb</p>
+
+<h1>Here's the info about: <%= @lender.first_name %> <%= @lender.last_name %></h1>
+<h2><%= @lender.email %></h2>
+<h2><%= @lender.password %></h2>
+<h2><%= @lender.money %></h2>
+<%if flash[:message] %>
+	<p><%= flash[:message]%></p>
+<%end%>
+
+
+<p><%= @lender.first_name%> can lend you lots of money</p>
+<%= link_to "edit this lender", edit_lender_path(@lender)%>
